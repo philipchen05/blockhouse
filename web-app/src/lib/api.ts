@@ -8,7 +8,7 @@ export const fetchCryptoPrices = async (setLoading?: (loading: boolean) => void)
     );
     return res.data;
   } catch (error) {
-    throw new Error('Failed to fetch crypto prices');
+    throw new Error(error instanceof Error ? error.message : String(error));
   } finally {
     if (setLoading) setLoading(false); // Stop loading after fetch
   }
