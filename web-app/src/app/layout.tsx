@@ -18,7 +18,7 @@ export default function RootLayout({ children }: LayoutProps) {
       <html lang='en'>
         <body className={`${inconsolata.className} flex-col h-screen flex items-center justify-center gap-10`}>
           <header className={`${inter.className} w-2xs rounded-xl py-2 flex gap-2 bg-white justify-center text-2xl font-mono text-black`}>
-            <Image src='https://www.blockhouse.app/svg/IconBlack.svg' alt='blockhouse.app logo'/>
+            <Image src='https://www.blockhouse.app/svg/IconBlack.svg' alt='blockhouse.app logo' width={0} height={0} sizes="100vw" style={{ width: 'auto', height: 'auto' }}/>
             blockhouse.app
           </header>
           <main className='flex justify-center'>{children}</main>
